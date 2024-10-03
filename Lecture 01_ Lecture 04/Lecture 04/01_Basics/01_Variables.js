@@ -13,7 +13,7 @@ accountCity = "Jaipur"
 accountEmail = "hc@hc.com"
 accountPassword = "212356444"
 // (without variable we can redeclare but its not a good way)
-accountCity = "Bengaluru" 
+// accountCity = "Bengaluru" 
 
 
 

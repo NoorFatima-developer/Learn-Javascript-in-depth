@@ -52,6 +52,15 @@ const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
 const real_another_array = another_array.flat(Infinity)
 console.log(real_another_array);
 
+//Array Methods(isArray, from, of)
 console.log(Array.isArray("Noor"))
 console.log(Array.from("Fatima"));
 console.log(Array.from({name: "Noor"}))     //not directly converting object that's why giving empty array like this []...
+
+//of Method:
+
+const score1 = 100
+const score2 = 200
+const score3 = 300
+
+console.log(Array.of(score1, score2, score3));

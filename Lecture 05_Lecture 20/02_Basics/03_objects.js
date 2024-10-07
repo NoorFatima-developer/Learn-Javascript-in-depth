@@ -17,6 +17,8 @@
 
 const mysymb = Symbol("key1")
 
+
+//object with literals...
 const JsUser = {    
     name: "noor",       //name is also string as well...
     "fullname": "noorfatima",

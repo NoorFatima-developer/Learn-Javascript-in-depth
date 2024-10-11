@@ -39,5 +39,3 @@
 //Basically () --> function definition jahan likhty nd () --> function execution
 //why use this:
 //Global scope k pollution sy probelm hoti hai tu global scope k variables ya jo b declaration hai osko hatany klye hum log ye use ktty hain....
-
-//3--way:

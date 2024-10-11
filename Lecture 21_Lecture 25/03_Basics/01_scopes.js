@@ -1,3 +1,5 @@
+//Lecture 21
+
 var c = 300
 let a = 300
 const b = 10
@@ -75,10 +77,11 @@ if (true) {
 
 // console.log(username1);         error coz calling outside the block
 
+//Lecture 22
 
 //Example 03
 
-//Part 01:
+//Part 01:(without storing value in variable)
 function addone(num) {
     return num + 1;
 }
@@ -93,7 +96,7 @@ function addone(num) {
 }
 
 
-//Part 03:
+//Part 03:(by storing value in variable)
 
 const addtwo = function(num) { 
     return num + 2;

@@ -157,7 +157,7 @@ if ( balance1 > 500 ) {
 
 // }
 
-//======&& operator========//
+//======&& Logical operator========//
 
 //Example:
 
@@ -171,7 +171,7 @@ if (userLoggedIn && debitCard ) {
     
 }
 
-//=====|| operator========//
+//=====|| Logical operator========//
 
 //Example:
 

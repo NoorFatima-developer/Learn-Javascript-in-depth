@@ -20,9 +20,12 @@ ISKA MTLB BS FOR-OF LOOP OBJECTS PR NAHI LGTA BAKI SB SBPR LAG JATA HAI...
 //For-each loop kisi b surat m value return nahi krta..
 (mtlb aghr meny koi new variable bana k osmai value store krwae hai ya function whatever tu jb b m oss value ko console krogi wo mjy result ni dyga..)
 
-mtlb ye hai k m forEach ko essy use ni krskti:
+=====filter ka kam different hai or map ka different hai but ye dono kam forEach sy hoskty hain lkin osmai code lmba o jta hai or wo value b return ni krta islye hum log isko prefer nahi krty...=====
 
+mtlb ye hai k m forEach ko essy use ni krskti:
 ...
+
+
 ======NEVER USE=========
 const newnum = myNums.forEach( (num) => {     //here num is basically a variable
     if (num > 4) {
@@ -30,6 +33,7 @@ const newnum = myNums.forEach( (num) => {     //here num is basically a variable
     }     
 })
 console.log(newnu);    //return from new variable
+
 
 =====For-Each always use======
 
@@ -41,10 +45,45 @@ myNums.forEach( (num) => {     //here num is basically a variable
 })
 console.log(newnu);    //return from new variable
 
-=======Filter======(File no six.js mai h iski details)======
+
+
+
+
+=======01---Filter======(File no six.js mai h iski details)======
 
 lkin filter m access krskty hain essy:
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const newnums = myNums.filter( (num) =>  num > 4)
 console.log(newnums);    
+
+====ab ye filter wala kam m forEach sy b krskti thie=====
+
+const newnu = []
+myNums.forEach( (num) => {     //here num is basically a new variable jismai values jygi and then wo 1 new variable m store o k console m print o gi
+    if (num > 4) {
+        newnu.push(num)
+    }     
+})
+console.log(newnu);    //return from new variable
+
+
+=====02---Map========
+
+const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const newNums = myNumbers.map( (num) => num + 10)
+console.log(newNums);
+
+====ab ye map wala kam m forEach sy b krskti thie=====
+
+newNum = []
+
+myNumbers.forEach( (num) => 
+   {
+    if (num >= 1) {
+        newNum.push(num + 10)
+    }
+   })
+console.log(newNum);
+

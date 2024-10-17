@@ -8,3 +8,19 @@ What I have I learned from this Lecture:
 15:57 array inside for loop
 18:40 keyword in loop (break and continue)
 
+Lecture 29_Lecture 30
+
+Understanding the basics of filter map and reduce in JavaScript
+Returning values in JavaScript
+Explanation of filter function in JavaScript
+Filter, map, and reduce in JavaScript
+Filtering and printing user books in JavaScript
+Filtering and reducing data using JavaScript filter method
+Using the map method to add 10 to each number in the given array
+Using filter in JavaScript
+Using filter, map, and reduce in JavaScript
+Filter, map, and reduce are important concepts in JavaScript
+Reduce function in JavaScript takes in an accumulator and a current value.
+The accumulator is used to keep track of values and perform operations on them.
+Understanding the concept of filter, map, and reduce in JavaScript
+Exploring filter, map, and reduce functions in JavaScript

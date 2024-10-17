@@ -1,3 +1,9 @@
+Summary(As I understood) :
+We can use For of loop for values printing/for iterating over values directly over [[[[ Strings & Array  ]]]
+We can use For in loop for values printing/for iterating over values by Indexes/Keys over Objects and Arrays & Strings .
+We Can Use forEach loop For iterating {{Over Arrays}} and its values as well.
+
+
 //FOR OF & FOR-IN LOOP:
 
 ====FOR-OF LOOP =====

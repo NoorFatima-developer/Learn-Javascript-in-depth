@@ -47,10 +47,8 @@ console.log(newnu);    //return from new variable
 
 
 
-
-
-=======01---Filter(filter mai jin values pr hum filter lagaty hain wo wo onko skip krta hai or hmri condition k according output deta hai...)
-======(File no six.js mai h iski details)======
+(=====File no six.js mai filter ki details)======
+=======01---Filter(filter mai jin values pr hum filter lagaty hain wo wo onko skip krta hai or hmri condition k according output deta hai...)======
 
 lkin filter m access krskty hain essy:
 
@@ -69,6 +67,7 @@ myNums.forEach( (num) => {     //here num is basically a new variable jismai val
 console.log(newnu);    //return from new variable
 
 
+(=====File no seven.js mai map ki details)======
 =====02---Map(map basically operations hai yahan pr sb return hoga)========
 
 const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -88,3 +87,5 @@ myNumbers.forEach( (num) =>
    })
 console.log(newNum);
 
+(=====File no eight.js mai redue ki details)======
+=====03---Reduce==========================

@@ -1,4 +1,3 @@
-
 //=======Map Method in javascript========
 
 const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -29,6 +28,6 @@ const newNu = myNumbers
                 .map( (num1) => num1 + 10)    //ab iss new variable jo k num hai ismai oper waly num ka result oski vaues aygi..
                 //kea mai ab filter b lagaskti o? yes ku ni let see...
                 .filter( (num1) => num1 >= 50)     
-                
+
 console.log(newNu);
 

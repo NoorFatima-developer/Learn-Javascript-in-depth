@@ -1,0 +1,10 @@
+LECTURE 27:(For loops, nested loops, break and continue in javascript:)
+
+What I have I learned from this Lecture:
+
+02:52 for loop
+8:40 if condition inside for loop
+10:50 for loop inside for loop
+15:57 array inside for loop
+18:40 keyword in loop (break and continue)
+

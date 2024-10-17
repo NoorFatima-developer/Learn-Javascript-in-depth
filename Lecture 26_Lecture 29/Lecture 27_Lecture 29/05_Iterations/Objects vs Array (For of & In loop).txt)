@@ -88,4 +88,16 @@ myNumbers.forEach( (num) =>
 console.log(newNum);
 
 (=====File no eight.js mai redue ki details)======
-=====03---Reduce==========================
+=====03---Reduce(reduce basically shopping cart m jo values wagira add krty hain tu ye osklye use hota hai)==========================
+
+//Reduce mai 1 hmry ps accumulator hota hai jismai hmri initial value jo hum rkhty hain wo jti hai
+//and ismai 1 hmry ps current value hoti hai jismai hmra result add o k result ata hai...
+//shopping cart wagwaira ki prices ko add krny klye use krty hain hum for Each wagira b use krskty hain but ye zda efficient hota hai and
+//ismai inital value jo hoti hai wo hum set krk sari prices ko print krwa skty hain...
+
+//Example:
+
+const myNumbers = [1, 2, 3]
+const Total = myNumbers.reduce( (acc, currval) => (acc + currval), 0)
+console.log(Total);
+

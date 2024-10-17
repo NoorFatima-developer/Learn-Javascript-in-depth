@@ -15,3 +15,36 @@
 
 ISKA MTLB BS FOR-OF LOOP OBJECTS PR NAHI LGTA BAKI SB SBPR LAG JATA HAI...
 
+====FOR-EACH LOOP ======
+
+//For-each loop kisi b surat m value return nahi krta..
+(mtlb aghr meny koi new variable bana k osmai value store krwae hai ya function whatever tu jb b m oss value ko console krogi wo mjy result ni dyga..)
+
+mtlb ye hai k m forEach ko essy use ni krskti:
+
+...
+======NEVER USE=========
+const newnum = myNums.forEach( (num) => {     //here num is basically a variable
+    if (num > 4) {
+        newnu.push(num)
+    }     
+})
+console.log(newnu);    //return from new variable
+
+=====For-Each always use======
+
+const newnu = []        //mtlb variable ko aleda sy oper declare or initialize krogi tb e m nichy access krskti o wesy ni krskti...
+myNums.forEach( (num) => {     //here num is basically a variable
+    if (num > 4) {             //or if condition logic b use krna prta forEach mai hmy
+        newnu.push(num)
+    }     
+})
+console.log(newnu);    //return from new variable
+
+=======Filter======(File no six.js mai h iski details)======
+
+lkin filter m access krskty hain essy:
+
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const newnums = myNums.filter( (num) =>  num > 4)
+console.log(newnums);    

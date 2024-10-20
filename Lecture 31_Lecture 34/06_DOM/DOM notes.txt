@@ -1,0 +1,13 @@
+Console m window DOM ko acces krna o tu use:
+....console.log(windows.document)
+and If I don't want to use windows tu wo automatically windows document e dekhyega but kuch objecs ko 
+miss krdyga..
+....console.log(document)
+and If I want k objects b sary show kry andr mjy windows b na likhna pry then I can use this:
+....console.log(document)
+
+and aghr meny kisi element ki id ko check krna hai k osmai kea pra hai then I can use this:
+document.getElementById('firstheading)  //jiski heading check krni hai m bracket m osko likhogi...
+and aghr m iss heading k andr jo b likha hoa hai osko change krna chahti o tu m wo b krskti o:
+....document.getElementById('firstheading').innerHTML = "<h1>Chai aur code</h1>  //yahan innerHTML mai = krk m jo b likhogi wo innerHTML k andr change o jyega...
+

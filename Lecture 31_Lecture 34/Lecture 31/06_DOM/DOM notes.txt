@@ -50,3 +50,25 @@ Array.from(tempClassList)
 ==LAST MAIN NOTES==
 //NodeList array ni hota lkin array ki trhan behave krta hai islye hum ospr forEach laga k values ko directlt manipulate krskty hain
 //HTMLCollection ko hum array m convrt krk phr ospr forEach laga k values ko manipulate krskty hain..
+
+
+//HUM Basically forEach islye use krty hain k aghr hmny bht sary kam krny o na tu hum 1 function k andr e krsky easily...
+like this:
+
+noor.forEach(function (li) {
+    li.style.color = "black";
+    li.style.backgroundColor = "green";
+    li.style.padding = "10px";
+    li.innerText = "Noor"
+})
+
+aghr sirf style krna ya bs text ya HTML 1 e chez krni phr hmy function ki zrort ni:
+    li.style.color = "black";
+
+
+============AHAM BATAIN============:
+
+///============ab 1 yr yd rkhna hai k forEach jo loop hai arary ispr work ni krta..
+2nd ye k NodeList array ki trhan behave krta hai ku k hum index wagaira use krk krty hain querySelectorAll() mai
+lkin ye array hota ni h real mai..3rd ye k HTMLCollection aghr ajye tu hmy pehly osko array m convert krna pryga phr e hum NodeList ko use krskygy..
+4th ye hai k map() function aghr ajye tu hmy pehly osko array m convert pryga and then NodeList maiessy e hum different ways sy kam krskty hain...

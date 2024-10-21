@@ -11,3 +11,31 @@ document.getElementById('firstheading)  //jiski heading check krni hai m bracket
 and aghr m iss heading k andr jo b likha hoa hai osko change krna chahti o tu m wo b krskti o:
 ....document.getElementById('firstheading').innerHTML = "<h1>Chai aur code</h1>  //yahan innerHTML mai = krk m jo b likhogi wo innerHTML k andr change o jyega...
 
+getAttribute() sy hum class or b bht sary attributes jo content k andr use hoey hain get krskty hain..
+getElementById() sy hum element ki id ko get krskty hain...
+getElementByClassName() sy hum class ko get krskty hain
+innerHTML sy hum jb HTML tags ko dkehna chahty hain tb hum use krty hain...and if html content ko dekhana chahty hain then it will not work
+innerText and innerContent dono e content show krty haun..
+lkin dono m difference ye h k innerText hmy sirf wo contnt show krta hai jo k website pr visible hota hai
+jbk textContent hmy wo sb text show krta hai jo k visible b na o browser pr lkin html m likha o beshk wo kisi span m likha o kisi b chez m..
+
+aghr humny in sbk sath style ko atatch krna o tu hum wo b krskty hain or color ko print b krwa skty hain and hum color ko change b krskty hain etc...
+iisi trhan hmry ps querySelector(#title)..aghr meny title ki id ko get krna tu i will use #..
+aghr meny querySelector sy class ko get krna then i will use querySelector(.title)..
+and aghr meny querySelector zda elements pr lagana hai tu i will use:
+querySelectorAll(.li)   ab ye mjy sari li classes ko show krdyga...
+
+///NodeList array sy milta julta hai but its not an array...
+//querySelector mai hum simple h1.style.color = "red" krwa skty hain 
+//lkin querySelectorAll array ki trhan behave krta hai nodoubt array ni hota:
+so we will change style like this:
+h1[0].style.color = "red"
+
+
+//====NOTE:====//
+NodeList array sy milta julta hai but its not an array...so hmry ps tareqqy b hoty hain jis sy hum nodeList ko array m convert krskty hain...
+but zda tr jb hum NodeList use krygy tu better yhi h k hum forEach use kry ku k forEach array ni hai or hum array pr map ni laga skty..
+lkin aghr hmy map use krna hai tu phr hmy pehly NodeList ssy array m convert krna pryga and then hum Array pr jo kuch mrzi laga skty hain... 
+
+//And getElementById , getElementByClassName , getAttribute etc...
+all of these are nodeLists...

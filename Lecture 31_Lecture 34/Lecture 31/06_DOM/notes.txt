@@ -8,3 +8,4 @@ Introduction to DOM in JavaScript
 Understanding the Document Object Model (DOM) in JavaScript
 DOM manipulation in JavaScript allows you to access and manipulate web page elements.
 DOM manipulation allows you to change the values and structure of a webpage using JavaScript.
+

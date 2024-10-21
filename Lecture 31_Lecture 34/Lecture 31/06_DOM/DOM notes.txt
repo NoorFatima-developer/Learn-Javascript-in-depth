@@ -39,3 +39,14 @@ lkin aghr hmy map use krna hai tu phr hmy pehly NodeList ssy array m convert krn
 
 //And getElementById , getElementByClassName , getAttribute etc...
 all of these are nodeLists...
+
+====HTMLCollection and NodeList both are different====
+
+---------NODELIST K OPER AGHR MAP USE KRNA HAI TU NODELIST KO ARRAY M CONVERT PRNA KRYGA AND THEN HUM USE KRYGY MAP...-----
+---------Essy e HTML collection ko b convert krna pryga pehly and HTML collection ko array m convert krny klye hum log use krygy:
+Array.from ka and isk andr wo variable ayega jis m hmra content store hai like this:
+Array.from(tempClassList)
+
+==LAST MAIN NOTES==
+//NodeList array ni hota lkin array ki trhan behave krta hai islye hum ospr forEach laga k values ko directlt manipulate krskty hain
+//HTMLCollection ko hum array m convrt krk phr ospr forEach laga k values ko manipulate krskty hain..

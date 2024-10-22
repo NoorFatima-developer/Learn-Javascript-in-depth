@@ -1,0 +1,35 @@
+====DOM===
+
+NOTES:
+
+Chai aur Code pr DOM sy related 4 videos hain 
+Lecture 31 sy lek Lecture 34 tk...
+
+Ab meny in 4 videos mai jo b sikha hai m osko summarize krk yahan pr likhogi:
+
+DOM kea hota hai ye document object model hai..basically ye hmry web browser ka skeleton hai:
+DOM mai meny sbsy pehly sikha hai k getElementById , querySelector, querySelectorAll, setAttribute, getAttribute ,
+innerHTML, innerText, TextContent ye sb kea hota hai...
+
+--for-loop in Nodelist ye sikha meny sbsy pehly or ismai ye k:
+aghr mery ps aghr zda elements hain ya onki list hai tu m element ko loop k andr create krk kesy m osmai innerText add krk 1 sath e screen pr print krwa skti o:
+
+---createElement(aadd innerText two ways , add classList, add Id, setAttribute etc)
+and then meny sikha hai k me simply element ko create kesy krskti o like div element hai tu m osko kesy create krogi m osmai innerText kesy add krogi isk b 2 tareqqy sikhy meny 
+and then m osko attach appendChild sy krogi ku k hawa m thori rkhna hai meny ossy and then m osko document k sath attach krk osmai jo b text likhogi wo mjy web broser pr show o ga..
+isk elawa meny ismai ye b sikha hai k m classList , id, setAttribute insbko ko kesy set krskti o...
+
+---Function k andr list elements ya zda kam o tu function k andr ko kesy createElement krk append krk innerText add krk value ko append krk show krwa skty hain:
+function m b 2 ways hain 1 optimized hai better whi k whi use kro jb m list ko function k andr sara kam krk krna tu..
+
+
+---and ab yahan tk m createElement ko simply b practice krlea and m function k andr dono tareqqo sy kea..
+
+--EditElement:
+ab element ko edit b krskty hain 1 ye hai k hum without reference krdain or 1 ye h k reference k sath krain 2 ways hain better yhi hai k hum reference k sath kry mtlb konsi jagah pr child ko krna wo hum add krdain..
+isko b hum nth child, firstchild, lastchild k lehaz sy b krskty hain..
+
+--removeElement:
+ab list m sy kisi element ko rmeove krna tu wo b hum easily krskty hain..
+
+That's all jo k dom mai hai...

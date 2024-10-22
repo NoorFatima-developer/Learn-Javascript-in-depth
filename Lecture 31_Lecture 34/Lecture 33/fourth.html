@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 34</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    
+    <ul class="language">
+    <li>Javascript</li>
+    </ul>
+
+</body>
+
+
+<!-- 1---Create Element -->
+<!-- Basically From this lecture I am learning How can I design lst items in js..isk hmry ps bht sary ways hain but i will try to do it by function... -->
+<script>
+    function addLanguage(langName) {
+        // ceate list item:
+        const li = document.createElement('li');
+        // add value in list item:
+        li.innerHTML = `${langName}`
+        //attack with unordered list item ku k abi tu ye hawa mai hain
+        document.querySelector('.language').appendChild(li);
+        //appendChild
+    }
+
+    addLanguage('javascript')
+    addLanguage('python')
+
+
+    // Do this work in optimized way:
+
+    function addOpiLanguage (langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+        
+    }
+
+    addOpiLanguage('java')
+    addOpiLanguage('ruby')
+
+</script>
+
+
+</html>

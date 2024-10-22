@@ -14,6 +14,7 @@
 
 
 <!-- 1---Create Element -->
+
 <!-- Basically From this lecture I am learning How can I design lst items in js..isk hmry ps bht sary ways hain but i will try to do it by function... -->
 <script>
     function addLanguage(langName) {
@@ -34,7 +35,8 @@
 
     function addOpiLanguage (langName) {
         const li = document.createElement('li');
-        li.appendChild(document.createTextNode(langName))
+        li.appendChild(document.createTextNode(langName)) 
+        //yahan pr hmny oper reference ni dea tha jis sy replace krna islye hmny append child use krk kea
         document.querySelector('.language').appendChild(li)
         
     }
@@ -42,7 +44,58 @@
     addOpiLanguage('java')
     addOpiLanguage('ruby')
 
+
+
+
+    //====2Edit:====//
+
+    //Example 01:(one way)
+
+    //yahan pr basically hmy child ka reference dea hai islye hum replacewith sy easily krskty hain ye darasal
+    //reference e hai : li:nth-child(2)
+    const secondlang = document.querySelector("li:nth-child(2)");
+    console.log(secondlang);
+    
+    //secondlang.innerHTML = "Mojo";
+    //halank ye kam innerhtml sy hojana tha lkin fer b m socha k ku na m creae element sy kro:
+
+    const newli = document.createElement('li');
+    newli.textContent = "Mojo"
+
+    //now edit/replace:
+    secondlang.replaceWith(newli)
+    console.log(newli);
+    
+    //Edit(Example 02) two-way
+    const firstlanguage = document.querySelector("li:first-child");
+    console.log(firstlanguage);
+
+    const newLi = document.createElement('li');
+    newLi.textContent = "c++"
+
+    firstlanguage.replaceWith(newLi);
+    console.log(newLi);
+    
+    //Edit(Example 03) three-way
+
+    const lastlanguage = document.querySelector("li:last-child");
+    console.log(lastlanguage);
+
+    const newLis = document.createElement('li');
+    newLis.textContent = "react"
+
+    lastlanguage.replaceWith(newLis);
+    console.log(newLis);
+
+    // Remove
+
+    const lastLang = document.querySelector("li:last-child");
+    console.log(lastLang);
+    //yahan oper ye refernce dea hoa hai li:last-child tu hum simply remove use krk remove krdygy that's it...
+    lastLang.remove();
+
 </script>
+
 
 
 </html>

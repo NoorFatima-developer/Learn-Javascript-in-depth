@@ -1,31 +1,88 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Background Color Switcher</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JavaScript Background Color Switcher</title>
 
-<div>
-
-    <nav>
-        <a href="/" aria-current="page">Home</a>
-        <a target="_blank" href="">YouTube Channel</a>
-    </nav>
-
-    <h1>Color Scheme Switcher</h1>
-    <span class="button" id="grey"></span>
-    <span class="button" id="white"></span>
-    <span class="button" id="blue"></span>
-    <span class="button" id="yellow"></span>
-   
-    <h2>
-        Try clicking on one of the following colors above <span>to change the Background color of this page!</span>
-    </h2>
-</div>
-
-<script src="chaiaurcode.js"></script>
+    <style>
+        html {
+    margin: 0;
+  }
+  
+  /* span {
+    display: block;
+  } */
+  .canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .button {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
     
-</body>
+  }
+  
+  #pink {
+    background: rgb(235, 136, 152);
+  }
+  
+  #parrot {
+    background: rgb(138, 213, 203);
+  }
+  #lightparrot {
+    background: rgb(58, 231, 153);
+  }
+  #sky {
+    background: rgb(58, 219, 240);
+  }
+  
+    </style>
+  </head>
+  <body>
+    
+    <div class="canvas">
+      <h2>Color Scheme Switcher🎨🖌️</h2>
+      <span class="button" id="pink"></span>
+      <span class="button" id="parrot"></span>
+      <span class="button" id="lightparrot"></span>
+      <span class="button" id="sky"></span><br/>
+      <tt>
+        <b>Try clicking on one of the colors above
+        to change the background color of this page!</b>
+      <tt>
+    </div>
+    <script>
+        
+const body = document.querySelector('body');
+console.log(body);
+
+const buttons = document.querySelectorAll('.button');
+console.log(buttons);
+
+// Nodelist k oper hum foreach(arrays k opr laga skty hain and Nodelist array ki trhan behave krta hai isley laga skty hain) 
+//laga skty hain,, lkin html collection ko pehly Nodelist mm krna hota and then hum ospr Foreach laga
+// skty hain...
+// ab foreach k andr hum  function laga skty hain and funciton arrow b hoskta hai or simple b it depends on me:
+
+
+buttons.forEach(function (button) {
+    console.log(button);
+    button.addEventListener('click', function (e) {
+        body.style.backgroundColor = e.target.id;
+        // console.log(e);
+        // console.log(e.target);
+        
+})
+
+})
+    </script>
+  </body>
 </html>

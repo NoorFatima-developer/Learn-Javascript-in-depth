@@ -1,0 +1,9 @@
+//ye meny foreach ko explain kea hai
+// Nodelist k oper hum foreach(arrays k opr laga skty hain and Nodelist array ki trhan behave krta hai isley laga skty hain) 
+//laga skty hain,, lkin html collection ko pehly Nodelist mm krna hota and then hum ospr Foreach laga
+// skty hain...
+// ab foreach k andr hum  function laga skty hain and funciton arrow b hoskta hai or simple b it depends on me:
+
+and then addeventlostener use kea hai meny...
+..and then bg-color change use kea hai meny...
+osko m if sy b krskti thie, switch sy b or simple one line sy b jesy m kea hai..

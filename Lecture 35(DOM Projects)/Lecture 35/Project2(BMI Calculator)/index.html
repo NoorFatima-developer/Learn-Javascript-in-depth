@@ -3,6 +3,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lecture 35</title>
+    <style>
+
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            color: white;
+            
+        }
+
+        .container {
+            width: 575px; 
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #797978;
+            box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
+           
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        #height,
+        #weight {
+            width: 50%;
+            height: 35px;
+            margin-top: 20px;
+            border-radius: 2px;
+
+        }
+
+        .weight-guide {
+            margin-left: 5px;
+            margin-top: 50px;
+        }
+
+        #results {
+            font-size: 35px;
+            margin-top: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        button {
+            font-size: 25px;
+            width: 150px;
+            height: 35px;
+            margin-left: 180px;
+            margin-top: 25px;
+            background-color: white;
+            padding: 1px 30px;
+            border-radius: 8px;
+            color: black;
+            text-decoration: none;
+            border: 2px solid black;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+        }
+
+        button:hover {
+            background-color: rgb(205, 218, 222);
+        }
+
+        h1 {
+            text-align: center;
+            padding-left: 15px;
+            padding-top: 25px;
+            margin-bottom: 20px;
+        }
+
+       
+    </style>
 </head>
 <body>
     
@@ -10,10 +95,10 @@
         <h1>BMI Calculator</h1>
 
         <form>
-            <p><label for="height">Height in CM</label>
+            <p><label for="height">Height in CM: </label>
                 <input type="text" id="height"/></p>
 
-            <p><label for="weight">Weight in CM</label>
+            <p><label for="weight">Weight in CM: </label>
                 <input type="text" id="weight"/></p>
                 <button>Calculate</button>
                 <div id="results"></div>
@@ -26,7 +111,30 @@
         </form>
     </div>
 </body>
+
     <script>
 
+        const form = document.querySelector('form')
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            const height = parseInt(document.querySelector('#height').value);
+            const weight = parseInt(document.querySelector('#weight').value);
+            const results = document.querySelector('#results');
+
+            if( height = '' || height < 0  || isNaN(height)) {
+                results.innerHTML = `Please enter a valid height: ${height}`;
+            }
+
+            else if (weight = '' || weight < 0 || isNaN(weight)){
+                results.innerHTML = `Please enter a valid weight: ${weight}`;
+            }
+
+            else {
+                const bmi = weight / (height * height / 10000).toFixed(2);
+                results.innerHTML = `<span>${bmi}</span>`;
+            }
+        });
     </script>
+
 </html>

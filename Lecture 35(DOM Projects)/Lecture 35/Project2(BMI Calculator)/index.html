@@ -1,16 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lecture 35</title>
     <style>
-
-        /* * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        } */
-
         body {
             font-family: sans-serif;
             display: flex;
@@ -21,7 +15,6 @@
             height: 100vh;
             width: 100vw;
             color: white;
-            
         }
 
         .container {
@@ -30,7 +23,6 @@
             border-radius: 10px;
             background-color: #797978;
             box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
-           
         }
 
         label {
@@ -43,7 +35,6 @@
             height: 35px;
             margin-top: 20px;
             border-radius: 2px;
-
         }
 
         .weight-guide {
@@ -72,7 +63,6 @@
             border: 2px solid black;
             cursor: pointer;
             transition: background-color 0.3s ease;
-
         }
 
         button:hover {
@@ -85,77 +75,63 @@
             padding-top: 25px;
             margin-bottom: 20px;
         }
-
-       
     </style>
 </head>
 <body>
-    
     <div class="container">
         <h1>BMI Calculator</h1>
-
         <form>
-            <p><label for="height">Height in CM: </label>
-                <input type="text" id="height"/></p>
-
-            <p><label for="weight">Weight in CM: </label>
-                <input type="text" id="weight"/></p>
-                <button>Calculate</button>
-                <div id="results"></div>
-                <div class="weight-guide">
-                    <h3>BMI Weight Guide</h3>
-                    <p>Under Weight = Less than 18.6</p>
-                    <p>Normal Range = 18.6 and 24.9</p>
-                    <p>OverWeight = Greater than 24.9</p>
-                </div>
+            <p>
+                <label for="height">Height in CM: </label>
+                <input type="text" id="height"/>
+            </p>
+            <p>
+                <label for="weight">Weight in KG: </label>
+                <input type="text" id="weight"/>
+            </p>
+            <button>Calculate</button>
+            <div id="results"></div>
+            <div class="weight-guide">
+                <h3>BMI Weight Guide</h3>
+                <p>Under Weight = Less than 18.6</p>
+                <p>Normal Range = 18.6 and 24.9</p>
+                <p>Over Weight = Greater than 24.9</p>
+            </div>
         </form>
     </div>
-</body>
 
     <script>
-
-        const form = document.querySelector('form')
+        const form = document.querySelector('form');
         form.addEventListener('submit', function(event) {
             event.preventDefault();
         
-            const height = parseInt(document.querySelector('#height').value);
-            const weight = parseInt(document.querySelector('#weight').value);
-            const weightguide = (document.querySelector('.weight-guide'));
+            const height = parseFloat(document.querySelector('#height').value);
+            const weight = parseFloat(document.querySelector('#weight').value);
             const results = document.querySelector('#results');
 
-
-            if( height === '' || height < 0  || isNaN(height)) {
-                results.innerHTML = `Please enter a valid height: ${height}`;
+            if (isNaN(height) || height <= 0) {
+                results.innerHTML = `Please enter a valid height.`;
+                return; // Exit the function early
             }
 
-            else if (weight === '' || weight < 0 || isNaN(weight)){
-                results.innerHTML = `Please enter a valid weight: ${weight}`;
-            }
-            
-            
-            else {
-                const bmi = weight / (height * height / 10000).toFixed(2);
-                results.innerHTML = `<span>${bmi}</span>`;
-
-            if(bmi < 18.6) {
-                results.innerHTML = `Underweight: ${bmi}`
+            if (isNaN(weight) || weight <= 0) {
+                results.innerHTML = `Please enter a valid weight.`;
+                return; // Exit the function early
             }
 
-            else if (bmi >= 18.6 && bmi <= 24.9) {
-                results.innerHTML = `Normal range: ${bmi}`;
-            } 
-            
-            else if (bmi > 24.9) {
-                results.innerHTML = `Overweight: ${bmi}`;
-            }
-            else {
-                results.innerHTML = `Error calculating BMI`;
-            }
-        }
-        
+            // Calculate BMI
+            const bmi = (weight / (height * height / 10000)).toFixed(2);
+            results.innerHTML = `Your BMI is: ${bmi}`;
 
-        
+            // Determine the BMI category
+            if (bmi < 18.6) {
+                results.innerHTML += `<br>Underweight`;
+            } else if (bmi >= 18.6 && bmi <= 24.9) {
+                results.innerHTML += `<br>Normal range`;
+            } else {
+                results.innerHTML += `<br>Overweight`;
+            }
         });
     </script>
-
+</body>
 </html>

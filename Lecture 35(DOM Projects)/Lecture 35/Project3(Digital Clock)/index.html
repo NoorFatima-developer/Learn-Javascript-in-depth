@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #212121;
+            color: white;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        #clock {
+
+            margin-top: 10px;
+            background-color: orangered;
+            padding: 20px 50px;
+            border-radius: 10px;
+            font-size: 40px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <div class="center">
+
+    <span>Your Local Time</span>
+    <div id="clock"></div>
+
+    </div>
+
+<script>
+
+const clock = document.getElementById("clock");
+
+//It will give result at one time..
+// let date = new Date();
+// console.log(date.toLocaleTimeString());
+
+// But I want hr interval pr new time deta jye so i will use interval function:
+
+setInterval( function() {
+    let date = new Date();
+    // console.log(date.toLocaleTimeString());
+    clock.innerHTML = date.toLocaleTimeString();
+}, 1000)
+
+
+</script>
+
+</body>
+</html>

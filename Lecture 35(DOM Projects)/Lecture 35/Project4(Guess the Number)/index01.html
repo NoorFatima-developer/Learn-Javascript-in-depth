@@ -119,8 +119,9 @@
         </form>
 
         <div class="resultparas">
-            <p>Previous Guesses: <span class="Previousguesses"></span></p>
-            <p>Guesses Remaining: <span class="remainingguesses"></span>10</p>
+            <p>Previous Guesses:<span class="Previousguesses"></span></p>
+            <p>Guesses Remaining:<span class="remainingguesses"></span>10</p>
+            <p class="loOrHigh"></p>
         </div>
 
     </div>
@@ -129,9 +130,19 @@
 
         const randomNumber = parseInt(Math.random() * 100 + 1);
         const userInput = document.querySelector('.UserInput');
-        const submitBtn = document.querySelector('.sbt');
+        const submit = document.querySelector('.sbt');
         const previousGuesses = document.querySelector('.Previousguesses');
-        
+        const guessesremaining = document.querySelector('.remainingguesses');
+        const loOrHigh = document.querySelector('.loOrHigh');
+        const resultparas = document.querySelector('.resultparas');
+
+        let prevGuess = [];
+        let numGuess = 1;
+        let playGame = true;
+
+        if(playGame) {
+            submit
+        }
     </script>
 </body>
 </html>

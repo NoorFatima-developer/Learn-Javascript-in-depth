@@ -62,7 +62,7 @@
             margin-bottom: 14px;
         }
 
-        .userInput {
+        .UserInput {
             font-size: 30px;
             width: 50%;
             height: 30%;
@@ -114,7 +114,7 @@
 
         <form>
             <label for="guessnum" id="chooseguess">Guess a Number</label>
-            <input type="text" id="guessnum" class="userInput">
+            <input type="text" id="guessnum" class="UserInput">
             <input type="submit" value="Submit guess" class="sbt">
         </form>
 
@@ -127,6 +127,10 @@
 
     <script>
 
+        const randomNumber = parseInt(Math.random() * 100 + 1);
+        const userInput = document.querySelector('.UserInput');
+        const submitBtn = document.querySelector('.sbt');
+        const previousGuesses = document.querySelector('.Previousguesses');
         
     </script>
 </body>

@@ -1,6 +1,6 @@
-const emoji = document.querySelector("#emoji");
+const updateemojie = document.getElementById('emojie');
 
-const emojis = [
+const emojies = [
   "😆",
   "😅",
   "🤣",
@@ -37,9 +37,6 @@ const emojis = [
   "😬",
 ];
 
-
-emoji.addEventListener("mouseover", () => {
-  emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+updateemojie.addEventListener("mouseover", function() {
+  updateemojie.innerText  = emojies[Math.floor(Math.random() * emojies.length)]
 })
-
-

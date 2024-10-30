@@ -1,0 +1,29 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(225, 91, 118);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 400px;
+  background-color: white;
+  padding: 2em;
+  height: 120px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  display: block;
+}
+

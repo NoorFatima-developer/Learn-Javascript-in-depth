@@ -1,5 +1,5 @@
 const form = document.querySelector('.form');
-const input = document.querySelector('.input');
+const input = document.querySelector('.inputs');
 const addtodos = document.querySelector('.todos');
 
 
@@ -9,7 +9,7 @@ function gettodo(value){
   const todo = document.createElement("div");
   todo.appendChild(textEl);
 
-  const deletetodo = document.createElement("div");
+  const deletetodo = document.createElement("span");
   deletetodo.innerHTML = "&times";
   deletetodo.classList.add('delete');
 

@@ -18,7 +18,7 @@ body {
   width: 400px;
   background-color: white;
   padding: 2em;
-  height: 120px;
+  /* height: 120px; */
 }
 
 input {
@@ -27,3 +27,23 @@ input {
   display: block;
 }
 
+.todos {
+  margin-top: 2em;
+}
+
+.todo {
+  margin-bottom: 1em;
+  border-left: 4px solid #ec5766;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(75, 75, 75);
+  font-size: 1.2em;
+
+}
+
+.delete {
+  color: #ec5766;
+  cursor: pointer;
+}

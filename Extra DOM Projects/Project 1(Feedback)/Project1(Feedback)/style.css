@@ -41,11 +41,11 @@ body {
   
 }
 
-.rating {
+/* .rating {
   position: relative;
   overflow: hidden;
 
-}
+} */
 
 .rating {
   flex: 1;
@@ -59,7 +59,7 @@ body {
   border-radius: 4px;
   background: #ccc;
   transition: 1s ease;
-  transform: scale(1.1);
+ transform: scale(1.1); 
 }
 
 .icon {
@@ -68,6 +68,10 @@ body {
   border-radius: 4px;
   margin: 2px 2px;
   
+}
+
+.icon:active {
+  transform: scale(0.98);
 }
 
 /* .rating .overlay {
@@ -113,5 +117,16 @@ body {
   width: 20%;
   height: 10%;
   background-color: #4caf50;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
 }
 
+.btn:active {
+  transform: scale(1);
+}
+
+.heart {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}

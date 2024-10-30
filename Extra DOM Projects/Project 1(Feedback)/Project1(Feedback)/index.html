@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,22 +15,15 @@
         <strong>Your Feedback👀</strong>
       </div>
 
-      <section>
+      <section class="ratingcontainer">
 
         <div class="rating">
           <div class="icon">😒</div>
-          <div class="overlay">
-            <span></span>
-        </div> 
           <small>Unhappy</small>
         </div>
   
-  
         <div class="rating">
           <div class="icon">😐</div>
-          <div class="overlay">
-            <span></span>
-        </div> 
           <small>Neutral</small>
         </div>
   
@@ -37,17 +31,18 @@
           <div class="icon">🥰</div>
           <div class="overlay">
             <span></span>
-        </div> 
+          </div>
           <small>Satisfied</small>
+        </div>
           
       </section>
 
-      <button class="btn">Send Feedback</button>
+      <button class="btn" id="send">Send Feedback</button>
 
-      </div>
-
-  </div>
+    </div>
   </main>
+
+  <script src="app.js"></script>
   
 </body>
 </html>

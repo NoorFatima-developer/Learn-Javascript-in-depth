@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Calculator</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
@@ -11,7 +11,7 @@
 
     <div class="inputs">
 
-      <h1>Result</h1>
+      <h1 class="result">Result</h1>
 
       <select class="selecopt">
         <option value="plus">+</option>
@@ -20,8 +20,8 @@
         <option value="divide">/</option>
       </select>
 
-      <input type="number" placeholder="Number 1">
-      <input type="number" placeholder="Number 2">
+      <input type="number" placeholder="Number 1" class="num1">
+      <input type="number" placeholder="Number 2" class="num2">
 
       <button class="submit">Submit</button>
        <!-- <input type="button" value="submit"> -->
@@ -29,5 +29,6 @@
     </div>
   </main>
 
+  <script src="app.js"></script>
 </body>
 </html>

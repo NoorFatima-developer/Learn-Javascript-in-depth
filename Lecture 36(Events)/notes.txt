@@ -1,0 +1,13 @@
+ Introduction to events in JavaScript
+ Events in JavaScript are invoked on specific activities such as mouse click or key press.
+ The three approaches discussed are: 1) Using the current approach reduces code. 2) The second approach involves selecting elements by ID and adding an onClick event. 3) The best approach is using event listeners for more features.
+ Different approaches to handling click events in JavaScript.
+ Events in JavaScript provide detailed information about user interactions.
+ The video discusses the events in JavaScript and the use of Alt key
+ Event propagation in JavaScript
+ By using the Stop Propagation method, you can prevent bubbling of events.
+ Using preventDefault() to change the default behavior of an event
+ Creating an event to make an image disappear when clicked
+ Using event listeners to track click events in JavaScript
+ Removing elements in JavaScript using the removeChild method.
+ Understanding event propagation and bubbling in JavaScript

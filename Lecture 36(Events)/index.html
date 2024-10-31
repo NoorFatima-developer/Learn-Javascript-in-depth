@@ -52,7 +52,9 @@
     // }, false) 
 
 
-    //Event Bubbling Propagation:(nichy sy oper tk jana)and by default ye propagation ki value false e hoti hai lgye ya na frq ni prta...
+    //i---Event Bubbling Propagation:(nichy sy oper tk jana)and by default ye propagation ki value false e hoti hai lgye ya na frq ni prta...
+
+
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul...");
         
@@ -66,7 +68,7 @@
     //tu yahan pr event bubbling propagation hori hai nichy sy oper tk jaray hai ismai hum
 
 
-     //Event Capturing Propagation:(oper sy nichy tk jata hai)and yahan propagation ki value true  hoti hai islye hum lgyega must...
+    //ii----Event Capturing Propagation:(oper sy nichy tk jata hai)and yahan propagation ki value true  hoti hai islye hum lgyega must...
     //  document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul...");
     //     e.stopPropagation();     //ab m yahan pr stop laga dea ab jb m owl pr click krogi tu bs ye oper wala  e click o ga ye nichy tk jyega e ni...
@@ -81,20 +83,50 @@
     // }, true); 
  
 
-    document.getElementById('images').addEventListener('click', function(e){
-        e.preventDefault();
-        console.log("clicked inside the ul...");
+    // e.preventDefault();
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     console.log("clicked inside the ul...");
         
-    }, false); 
+    // }, false); 
 
-    document.getElementById('google').addEventListener('click', function(e){
-        e.preventDefault();
-        console.log("Google clicked...");
-        e.stopPropagation();
-    }, false); 
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();     //iss sy ye faida hota hai k wo oss pagepr redirect ni krwata jiska link dala hota hai ...
+    //     console.log("Google clicked...");
+    //     e.stopPropagation();
+    // }, false); 
 
 
+    // document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target.parentNode);   //target yahan pr images h or parentNode li h jisk andr images hai
+        // let removeIt = e.target.parentNode;
 
+        //two ways to remove:
+        // i--> remove
+        // removeIt.remove()
+        //ii-->parentNode.removeChild(removeIt)
+        // removeIt.parentNode.removeChild(removeIt)
+    // }, false)
+
+        //ab ye tu thk h lkin aghr m list pr b click krti o tu ye sari images ko deltekrdeta hai whole..tu ab m esa b ni chahti tu m osklye kuch
+        //strict checks lagaogi:
+
+        //ab pura code esay hoga:
+
+        document.querySelector('#images').addEventListener('click', function(e){
+
+        // console.log(e.target.parentNode);    //ye parentNode ko print kryga
+        // console.log(e.target.tagName);  //ye tags ko pront kryga jis tag pr m click krogi
+        // console.log(e.target.id);       //ye target ki id ko print kryga...
+        
+
+        if(e.target.tagName === "IMG"){
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+  
+    }, false)
 
 
 

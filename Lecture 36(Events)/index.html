@@ -23,17 +23,81 @@
 
 <script>
     // approach 2: ye wali approach b chly gi result degi but ye apparoach b thk ni h....
-    document.getElementById('owl').onclick = function(){
-        alert('Owl clicked again!')
-    }
+    // document.getElementById('owl').onclick = function(){
+    //     alert('Owl clicked again!')
+    // }
 
-    // approach 3:(best approach) 
-    document.getElementById('river').addEventListener('click', function(){
-        alert('Owl clicked again!')
-    }) 
 
     // Attach event(js events basics):
     //attachEvent
-    //jQuery - on (ye jesy eventlistener kam krta hai wesy e jquery m on laga k hum kam chalaty thy)
+    //jQuery - on (ye jesy addeventlistener kam krta hai wesy e jquery m oneventlistener laga k hum kam chalaty thy)
+
+    // MUST STUDY ABOUT THESE EVENTS:
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    //Event Propagation(ye nichy code m jo meny false use kea h isko hum event propagation kehty hain..)
+    //Event Propagation 2 trhan k hoty hain...
+    //i-event bubbling(mostly used)
+    //ii-event capturing(some used)
+    //Now study kesy event propagation hota hai and kesy hum isko rook b skty hain...
+     
+    // approach 3:(best approach) 
+    // document.getElementById('river').addEventListener('click', function(e){
+    //     console.log(e);
+        
+    // }, false) 
+
+
+    //Event Bubbling Propagation:(nichy sy oper tk jana)and by default ye propagation ki value false e hoti hai lgye ya na frq ni prta...
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul...");
+        
+    // }, false);      //jb m 1 1 image ko click krti jaogi tb tb ye log wala result print krta jyega...
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked...");
+    // e.stopPropagation();    //ab m yahan pr stop laga dea ab jb m owl pr click krogi tu bs owl wala e click o ga ye oper waly ko stop krdyga,,
+        
+    // }, false);      //ab yahan pr jesy e m owl pr click krogi pehly ye mjy owl ki output dega and after that ye mjy oper images wala output dega
+    //tu yahan pr event bubbling propagation hori hai nichy sy oper tk jaray hai ismai hum
+
+
+     //Event Capturing Propagation:(oper sy nichy tk jata hai)and yahan propagation ki value true  hoti hai islye hum lgyega must...
+    //  document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul...");
+    //     e.stopPropagation();     //ab m yahan pr stop laga dea ab jb m owl pr click krogi tu bs ye oper wala  e click o ga ye nichy tk jyega e ni...
+        
+
+    // }, true);      //jb m 1 1 image ko click krti jaogi tb tb ye log wala result print krta jyega...
+
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked...");
+       
+    // }, true); 
+ 
+
+    document.getElementById('images').addEventListener('click', function(e){
+        e.preventDefault();
+        console.log("clicked inside the ul...");
+        
+    }, false); 
+
+    document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault();
+        console.log("Google clicked...");
+        e.stopPropagation();
+    }, false); 
+
+
+
+
+
+
+
 </script>
 </html>

@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 36</title>
+</head>
+<body>
+    <h2>Amazing image</h2>
+
+    <div>
+        <ul id="images">
+            <!-- approach 1: img tag k andr event ko use krny sy result bilkul thk ata haii but ye achi approach ni h -->
+            <!-- <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop" onclick="alert('owl')"></li> -->
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: rgb(3, 37, 66);" href="https://google.com" id="google">Google</a></li> 
+    </ul>
+    </div>
+</body>
+
+<script>
+    // approach 2: ye wali approach b chly gi result degi but ye apparoach b thk ni h....
+    document.getElementById('owl').onclick = function(){
+        alert('Owl clicked again!')
+    }
+
+    // approach 3:(best approach) 
+    document.getElementById('river').addEventListener('click', function(){
+        alert('Owl clicked again!')
+    }) 
+
+    // Attach event(js events basics):
+    //attachEvent
+    //jQuery - on (ye jesy eventlistener kam krta hai wesy e jquery m on laga k hum kam chalaty thy)
+</script>
+</html>

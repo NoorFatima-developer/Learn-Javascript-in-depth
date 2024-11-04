@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 38</title>
+</head>
+<body>
+
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+    
+    <script>
+
+// Basic setTimeout()...
+
+        // setTimeout(function () {
+        //     console.log("My name is Noor Fatima");
+        // }, 2000)
+
+        // We can also do above work by passing reference of the function like that:
+
+        const sayNoor = function () {
+            console.log("My name is Noor Fatima");
+        }
+
+        //pass reference of line 22 func here....
+        setTimeout(sayNoor, 2000)
+
+// Update h1
+        // update h1;
+        const changeText = function(){
+            document.querySelector('h1').innerHTML = "Best JS Series..."
+        } 
+
+//After 2 seconds h1 will be change here...
+        const changeMe = setTimeout(changeText, 2000)
+
+// clearTimeout jb m apny SetTimeout ko clearn krna chahti hon:
+
+        // ye b thk h ye hata daingy setTimeout ko lkin m tu kisi event pr lagana chahti ho tu see at line 34...
+        // clearTimeout(changeMe);
+        
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearTimeout(changeMe);
+            console.log("Stopped");     
+        });    
+        
+        // Difference between setTimeout and setInterval
+        // setTimeout kehta hai k mjy function do or time stamp m osko 1 e dfa utany wait k bd jo tmny dea h run krdoga..
+        // setInterval lkin osko cintinously run keye jata hau...
+    </script>
+
+</body>
+</html>
+

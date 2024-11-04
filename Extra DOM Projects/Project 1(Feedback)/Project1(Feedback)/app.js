@@ -1,5 +1,3 @@
-
-
 const rating = document.querySelector('.rating');
 const icon = document.querySelector('.icon');
 const btn = document.querySelector('.btn');

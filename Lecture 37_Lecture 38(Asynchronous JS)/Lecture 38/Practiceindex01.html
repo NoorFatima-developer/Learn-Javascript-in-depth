@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 38</title>
+</head>
+<body>
+
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+
+// setInterval Basic:
+        // setInterval(function () {
+        //     console.log("Noor", Date.now());
+        // },1000)
+
+//Pass by reference:
+        // I can also  make func separately and then pass refrence of this function to setInterval like this:
+
+        // const sayDate = function () {
+        //     console.log("Noor", Date.now());
+        // }
+
+        // setInterval(sayDate, 2000,)
+
+        // and setInterval k andr 3rd parameter b pass krskty hain and ossi m change b krydygy tu directly upadte b o jeyga..
+        //like this:
+
+// Update innerHTML directly by passing thrid paramter:
+        const sayDate = function (str) {
+            console.log(str, Date.now());
+        }
+         setInterval(sayDate, 2000, "Hellos World!");
+
+// clear setInterval
+
+const sayDate1 = function (str) {
+            console.log(str, Date.now());
+        }
+
+         const intervLid = setInterval(sayDate1, 2000, "Hello World!");
+         clearInterval(intervLid);
+    </script>
+</body>
+</html>

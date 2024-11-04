@@ -11,7 +11,62 @@
     <button id="stop">Stop</button>
 
     <script>
+
+     //generate a random color:
+
+     const randomColor = function(){
+        const hex = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)];
+            
+        };
+        return color;
+     };
+
+    //  console.log(Math.floor(Math.random() * 16));
+
+     //Attach event listener with my start button:
+
+     const start = document.querySelector('#start');
+     const stop = document.querySelector('#stop');
+     let IntervalId;
+
+//start
+     const startchangingcolor = function(){
+        //lkin yahan line 37 local scope m h islye m isko bhr likho gi ta k stop b isko acess krsky or yahan\
+        //sy cut krdogi lkin m abi tk cut islye ni ki ta k in future m smj sko..
+        // let intervalId = setInterval(changebg, 1000)
+
+        //to write code better:
+        //m isko if m likhogi otherwise wesy zrort ni...
+        //aghr intervaid h e ni ya null hai tu...
+        if(!IntervalId) {
+            IntervalId = setInterval(changebg, 1000)
+        }
+        //setinterval basically 1 function ko as a mrthod leta tu m nichy waly ko 1 func k andr dal dogi
+        function changebg(){
+            document.body.style.backgroundColor = randomColor();
+        } 
         
+     }
+     start.addEventListener('click', startchangingcolor);
+
+//stop
+     const stopchangingcolor = function(){
+        clearInterval(IntervalId);
+        // I will write this to make my code clean:
+        // I will flush out..
+        //  value ko deference kr rhy...
+        // basically memory free klye use kr rhy hain...
+        // but someime iski waja sy kea pata stop button work na kry ya kuch or issue ajye tu
+        //hum isko essy ni chory gy hum isko thora sa modify krdygy...
+        //isklye line 40 ko m modify krogi osko condition m likhdogi m...
+        IntervalId = null;
+     }
+
+     stop.addEventListener('click', stopchangingcolor);
+
     </script>
     
 </body>

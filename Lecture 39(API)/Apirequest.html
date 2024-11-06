@@ -20,7 +20,8 @@
             // Send data by using XMLHTTPRequest...
             // ye XMLHTTPRequest method jo h smj lain k ye 1 class hai isko object banana prta hai by using new keyword...
             // XMLHttpRequest() is a constructor function and it returns a new XMLHttpRequest object.
-            const url = "https://api.github.com/users/NoorFatima-developer"
+            const url = "https://api.github.com/users/pro6rammerboy"
+
             const xhr = new XMLHttpRequest();
 
             // open is a method of xhr...
@@ -38,11 +39,14 @@
                     //  ab m noor k github k followers ko dkehna chahti o tu i will hold it in a variable by this;
                     //and JSON.Parse string ko json m convert krdeta hai
                     const data = JSON.parse(this.responseText)
+
                     console.log(data);
                     console.log(typeof data);
                     
                     console.log(data.followers); 
                     console.log(data.avatar_url); 
+                    console.log(data.repos_url);
+                     
                 }
             }
          // ab open method essy send ni hoga osklye hmy send method use krna o ga...
@@ -52,7 +56,5 @@
 
         </html>
 
-        Here's an updated version with more icons to make the post more engaging:
-
----
+   
 

@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 39</title>
+</head>
+
+<style>
+
+    body {
+        background-color: #212121;
+        color: white;
+        font-family: Arial, sans-serif;
+        height: 100%;
+        width: 100%;
+        /* padding: 0;
+        margin: 0; */
+        /* box-sizing: border-box; */
+        
+    }
+
+   #XMLHTTPRequest {
+        padding: 10px 20px;
+        background-color: rgb(64, 155, 64);
+        border-radius:  5px;
+        border: 3px solid transparent;
+        font-weight: bold;
+        font-size: 1rem;
+        /* margin: 10px; */
+        /* display: none; */
+   }
+
+   h2{
+    padding: 15px 5px;
+    margin-bottom: 3px;
+   }
+
+   .user-info {
+    margin-top: 20px;
+    display: none;
+   }
+  
+</style>
+
+<body>
+        
+       <div>
+            <h2>User Information</h2>
+            <button id="XMLHTTPRequest">Fetch User Data</button>
+       </div>
+
+
+        <div class="user-info">
+            <p><strong>Followers: </strong><span id="followers"></span></p>
+            <p><strong>Avatar: </strong><img id="avatar" src="" alt="Avatar" width="100" /></p>
+            <p><strong>Repositories:</strong></p>
+            <ul id="repos-list">
+            </ul>
+        </div>
+
+</body>
+
+<script>
+
+    const giturl = "https://api.github.com/users/NoorFatima-developer"
+    const button = document.getElementById('XMLHTTPRequest');
+    const userinfo = document.querySelector('.user-info');
+
+    button.addEventListener('click', function(){
+        const xhr = new XMLHttpRequest;
+        xhr.open('GET', giturl);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4 && xhr.status == 200){
+                const data = JSON.parse(this.responseText);
+
+            //Populate the user information 
+
+            document.getElementById('followers').textContent = data.followers;
+            document.getElementById('avatar').src = data.avatar_url;
+            userinfo.style.display = 'block';
+            
+            // Populate the repositories list
+
+            const repoxhr = new XMLHttpRequest();
+            repoxhr.open('GET', repos_url);
+            repoxhr.onreadystatechange = function(){
+                if(repoxhr.readyState == 4 && repoxhr.status == 200){
+                    const repodata = JSONparse(this.responseText);
+                    const reposList = document.getElementById('repos_list');
+                    reposList.innerHTML = '';           //Clear any existing content
+                }
+            }
+            }
+        }
+    })
+
+    
+</script>
+</html>

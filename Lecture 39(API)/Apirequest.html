@@ -1,2 +1,55 @@
-<!-- XML HTTP REQUEST... NO Doubt hum ajkal k modern era m isko use ni krty but ye bht e interesting chez hai...ajkal ye jo fetch agya hai hum isko use krty hain.... -->
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>API Request</title>
+        </head>
+        <body style="background-color:#212121;">     
 
+            <!-- XML HTTP REQUEST... NO Doubt hum ajkal k modern era m isko use ni krty but ye bht e interesting chez hai...ajkal ye jo fetch agya hai hum isko use krty hain.... -->
+
+<!-- XML Ready State: -->
+<!-- Value	State	Description
+        0	UNSENT	Client has been created. open() not called yet.
+        1	OPENED	open() has been called.
+        2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+        3	LOADING	Downloading; responseText holds partial data.
+        4	DONE	The operation is complete. -->
+
+        </body>
+
+        <script>
+
+            // Send data by using XMLHTTPRequest...
+            // ye XMLHTTPRequest method jo h smj lain k ye 1 class hai isko object banana prta hai by using new keyword...
+            // XMLHttpRequest() is a constructor function and it returns a new XMLHttpRequest object.
+            const url = "https://api.github.com/users/NoorFatima-developer"
+            const xhr = new XMLHttpRequest();
+
+            // open is a method of xhr...
+            // open k andr hmry ps 2 paramters hoty hain 1 Method or 1 string...
+            xhr.open('GET', url)
+            // console.log("HERE");     //print here on screen so it means it works:
+            // console.log(xhr.readyState);    //print 1 on screen as it is readystate...
+
+            //ye m current context ki bt kr rhi o iska mtlb jb b current context ki bt krty hain hum tb e this lagaty hain...
+            xhr.onreadystatechange = function (){
+                console.log(xhr.readyState); //print 2 3 4  on screen(it means jitni dfa hamri state o ri h utana dfa e hamra func execute o rha hai) tbi tu hum isko asynchronous b kehty hain k ye batarha hau k koi kam o gya hai phr sy callback m lg jao isko koi kam hai...
+
+                if(xhr.readyState == 4){
+                    console.log(this.responseText);
+                    //  ab m noor k github k followers ko dkehna chahti o tu i will hold it in a variable by this;
+                    //and JSON.Parse string ko json m convert krdeta hai
+                    const data = JSON.parse(this.responseText)
+                    console.log(data);
+                    console.log(typeof data);
+                    
+                    console.log(data.followers); 
+                }
+            }
+         // ab open method essy send ni hoga osklye hmy send method use krna o ga...
+            xhr.send();
+
+        </script>
+
+        </html>

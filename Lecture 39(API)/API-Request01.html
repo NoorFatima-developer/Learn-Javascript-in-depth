@@ -2,11 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture 39</title>
+    <title>APIRequest</title>
 </head>
-
 <style>
-
     body {
         background-color: #212121;
         color: white;
@@ -15,8 +13,7 @@
         width: 100%;
         /* padding: 0;
         margin: 0; */
-        /* box-sizing: border-box; */
-        
+        /* box-sizing: border-box; */    
     }
 
    #XMLHTTPRequest {
@@ -28,7 +25,7 @@
         font-size: 1rem;
         /* margin: 10px; */
         /* display: none; */
-   }
+    }
 
    h2{
     padding: 15px 5px;
@@ -39,16 +36,13 @@
     margin-top: 20px;
     display: none;
    }
-  
 </style>
 
-<body>
-        
+<body> 
        <div>
             <h2>User Information</h2>
             <button id="XMLHTTPRequest">Fetch User Data</button>
        </div>
-
 
         <div class="user-info">
             <p><strong>Followers: </strong><span id="followers"></span></p>
@@ -57,17 +51,17 @@
             <ul id="repos-list">
             </ul>
         </div>
-
 </body>
 
 <script>
 
     const giturl = "https://api.github.com/users/NoorFatima-developer"
+    const repos_url = "https://api.github.com/users/NoorFatima-developer/repos"
     const button = document.getElementById('XMLHTTPRequest');
     const userinfo = document.querySelector('.user-info');
 
     button.addEventListener('click', function(){
-        const xhr = new XMLHttpRequest;
+        const xhr = new XMLHttpRequest();
         xhr.open('GET', giturl);
         xhr.onreadystatechange = function(){
             if(xhr.readyState == 4 && xhr.status == 200){
@@ -76,24 +70,46 @@
             //Populate the user information 
 
             document.getElementById('followers').textContent = data.followers;
-            document.getElementById('avatar').src = data.avatar_url;
+            const avatar = document.getElementById('avatar');
+            avatar.src = data.avatar_url;
             userinfo.style.display = 'block';
             
+            avatar.addEventListener('click', function(e){
+                avatar.remove();
+                
+            })
             // Populate the repositories list
 
             const repoxhr = new XMLHttpRequest();
             repoxhr.open('GET', repos_url);
             repoxhr.onreadystatechange = function(){
                 if(repoxhr.readyState == 4 && repoxhr.status == 200){
-                    const repodata = JSONparse(this.responseText);
-                    const reposList = document.getElementById('repos_list');
+                    const repodata = JSON.parse(this.responseText);
+                    const reposList = document.getElementById('repos-list');
                     reposList.innerHTML = '';           //Clear any existing content
+
+                    repodata.forEach(repo => {
+                        const list = document.createElement('li');
+                        const link = document.createElement('a');
+                        link.href = repo.html_url;
+                        link.target = '_blank';         // Open link in a new tab
+                        link.textContent = repo.name;
+                        list.appendChild(link);
+
+                        list.addEventListener('click', function(e) {
+                            list.remove();
+                        });
+                        reposList.appendChild(list);   // Add each repo to the list
+                        console.log(link);
+                        console.log(list);       
+                    });
                 }
-            }
+            };
+            repoxhr.send();     // Send the request for repositories
             }
         }
+        xhr.send();             // Send the request for user information
     })
 
-    
 </script>
 </html>

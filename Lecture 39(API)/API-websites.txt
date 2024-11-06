@@ -1,0 +1,5 @@
+Common API Websites are as follows:
+
+https://api.github.com/users/pro6rammerboy
+
+https://randomuser.me/ (In this website its difficult to read API So, I will use json formatter)

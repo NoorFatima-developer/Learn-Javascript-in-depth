@@ -9,6 +9,7 @@
 //lkin creae krna b tu sikhna hai so see at below:
 // promise apny andr callback leta hai blky callback hell(callback hell ka mtlb ye h k callback k andr e callback fer callback)
 
+// NOTE: Basically reolve directly connected hmry then k andr...islye tu hum then ko consume krny k bd resolve krty hain setTimeout k andr...
 // ==================================Promise Practice 01 Task======================================
 //1---Creation Code of promises:(by storing in variable)
 
@@ -40,12 +41,33 @@ promiseOne.then(function(){
 //1--- Creation Code of promises:(without storing in a variable)
 
 new Promise(function(resolve, reject){
-
     setTimeout(function(){
         console.log("Passing task 2");
+// 3-- Resolved Promise:
         resolve()
     }, 1000);
+// 2 --- Consume promise
 }).then(function(){
     console.log("Passing 2 resolved");
     
 })
+
+// ==================================Promise Practice 03 Task======================================
+//1-- Creation of promise(By storing it in a variable) 
+
+const promiseTHree = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        console.log("Passing task 3");
+        // 3-- Resolved Promise:
+        resolve({username: "Chai", email: "chai@gmail.com"})
+    }, 1000)
+})
+
+// 2-- Consume promise
+
+// ab ye jo data meny pass kea h na ye apny andr oss obj ko e resolve kryga...
+promiseTHree.then(function(data){
+    console.log("Passing 3 resolved", data);
+})
+
+// ==================================Promise Practice 04 Task======================================

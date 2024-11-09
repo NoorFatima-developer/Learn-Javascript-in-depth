@@ -72,7 +72,7 @@ promiseTHree.then(function(data){
 
 // ==================================Promise Practice 04 Task======================================
 
-// 1--Create Promise(Use of Reject with resolve...)
+// 1--Create Promise(Use of Reject with resolve, catch, finally..)
 const promiseFour = new Promise(function(resolve, reject){
     setTimeout(function(){
 
@@ -121,9 +121,10 @@ promiseFour
 
 // ==================================Promise Practice 05 Task======================================
 
-// 1--Create Promise(Use of Reject with resolve...)
+// 1--Create Promise(Use of Reject with resolve and finally(not handle catch ku k kafi cases m hum db connect krny k bd kehty hain k hmy agy ni brna tb ye kam ata hai..or hmy error handling ni kri prti))
 const promiseFive = new Promise(function(resolve, reject){
     setTimeout(function(){
+        let error = true;
         // 3--Resolve promise
         if(!error){
             resolve({username: "njavascript", password: "123"})
@@ -133,6 +134,53 @@ const promiseFive = new Promise(function(resolve, reject){
         }
     }, 1000)
 })
-// 2--Resolve Promise:
+// 2--Concsume Promise:
 // Async b tu wait krta h and then kam krta hai(Async blocking in js m e tu ata hai)
 // so we can consume it as async as well ku k promise b wait krta hai and thne kam krta hai same essy e async b tu wait krta hai and then kam krta hai
+
+
+// async directly errors ko handle ni hoty so use try catch ya .then catch..
+async function consumepromisefile(){
+    // promise hmry ps 1 object h islye hum osko essy consume ni krygy jesy meny below m kea h...
+    // await promiseFive()    
+    // hum promise ko essy consume krty hain...
+    try {
+    const response = await promiseFive
+    console.log(response);  
+    } catch (error){
+        console.log("An error occurred in JS");
+    }
+}
+
+consumepromisefile();
+
+// Use of fetch(): Now do some practical work by using the promise: of async await...
+
+// async function getAllusers(){
+//  try {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//     console.log(response);
+    
+//     // convert this above string into json format.
+//     const data = await response.json();
+//     console.log(data);
+//  } catch (error) {
+//     console.log("E: ",error);  
+//  }
+// }
+
+// getAllusers();
+
+// ======Ab yhi oper wala kam m try catch sy ni krna chahti i want k m .then sy kro tu see below code:
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response)=> {
+    return response.json();
+})
+// ab response sy jo data wps ayega oskley hum 1 or then use krygy...
+
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => 
+      {return console.log(error)});

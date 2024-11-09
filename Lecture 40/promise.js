@@ -53,7 +53,7 @@ new Promise(function(resolve, reject){
 })
 
 // ==================================Promise Practice 03 Task======================================
-//1-- Creation of promise(By storing it in a variable) 
+//1-- Creation of promise(By storing it in a variable and how promise consume data which we pass in resolve) 
 
 const promiseTHree = new Promise(function(resolve, reject){
     setTimeout(function(){
@@ -71,3 +71,68 @@ promiseTHree.then(function(data){
 })
 
 // ==================================Promise Practice 04 Task======================================
+
+// 1--Create Promise(Use of Reject with resolve...)
+const promiseFour = new Promise(function(resolve, reject){
+    setTimeout(function(){
+
+        // Hum yahan console.log b krskty hain hum yahan checks b even laga skty hain
+        // and then jb hum if else likhgy tu if case resolve klye hoga and else case reject klye b use o ga yahan...
+        let error = true;   //isska mtlb ye h k error exist krta hai...
+        // 3--Resolve promise
+        
+        if(!error){
+            resolve({username: "noor", password: "123"})
+        }
+        else{
+            reject("An error occurred");
+        }
+    }, 1000)
+})
+
+// 2-- Consume Promise(reolve and rehect jahan use krty hain osko consume krny ka different way hota hai)
+
+// pehli chez ye h k jb hum reject use krty hain tu store time hum osko 1 variable m store krk log ni krwaty skty..
+// jesy yahan noor h...
+
+// const noor = promiseFour.then(function(user){
+//     console.log("Promise 4 resolved");
+// })
+
+// console.log(noor);
+
+// Ab ye dekhygy kesy consume kry hum..(and kesy hum callback hell sy bach skty hain using then and catch...callback hell ye hota hai jismai hmry ps alot of callbacks hoti h)
+// chaining of .then....
+
+promiseFour
+.then(function(user){                //here i used simple func
+    console.log("Promise 4 resolved", user);
+    return user.username;
+})
+.then((username) =>                    //here i used arrow func
+    console.log(username))
+.catch(function(error)      
+    {console.log(error);         
+
+}).finally(() => {
+    console.log("Promise is resolved and rejected..");
+    
+})
+
+// ==================================Promise Practice 05 Task======================================
+
+// 1--Create Promise(Use of Reject with resolve...)
+const promiseFive = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        // 3--Resolve promise
+        if(!error){
+            resolve({username: "njavascript", password: "123"})
+        }
+        else{
+            reject("An error occurred in JS");
+        }
+    }, 1000)
+})
+// 2--Resolve Promise:
+// Async b tu wait krta h and then kam krta hai(Async blocking in js m e tu ata hai)
+// so we can consume it as async as well ku k promise b wait krta hai and thne kam krta hai same essy e async b tu wait krta hai and then kam krta hai

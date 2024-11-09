@@ -9,7 +9,8 @@
 //lkin creae krna b tu sikhna hai so see at below:
 // promise apny andr callback leta hai blky callback hell(callback hell ka mtlb ye h k callback k andr e callback fer callback)
 
-//Creation Code of promises:
+// ==================================Promise Practice 01 Task======================================
+//1---Creation Code of promises:(by storing in variable)
 
 const promiseOne = new Promise(function(resolve, reject){
     //Do an async tasks
@@ -17,8 +18,10 @@ const promiseOne = new Promise(function(resolve, reject){
 
     setTimeout(() => {
         console.log('Async task is completed');
+        // jb thk m rsolve wala func run ni krogi tbtk wo resolve ni hoga...and tbtk "Promise comleted screen pr shwow ni oga"
         //if task is successful
-        // resolve('Task One Successful');
+        // 3--promise reolve
+        resolve('Task One Successful');
     }, 2000);
 })
 
@@ -26,8 +29,23 @@ const promiseOne = new Promise(function(resolve, reject){
 // ab hum yhi discuss krygy k promise ka akhir kea kam h..
 // yahan hum sbsy pehly .then use krygy ku k "then" jo h na wo directly link hai hmary resolve k sath
 
-// Consume promise:
+//2--- Consume promise:
 promiseOne.then(function(){
     console.log("Promise Consumed");
+    
+});
+
+// ==================================Promise Practice 02 Task======================================
+
+//1--- Creation Code of promises:(without storing in a variable)
+
+new Promise(function(resolve, reject){
+
+    setTimeout(function(){
+        console.log("Passing task 2");
+        resolve()
+    }, 1000);
+}).then(function(){
+    console.log("Passing 2 resolved");
     
 })

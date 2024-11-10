@@ -21,8 +21,7 @@ Example of Object Literals is:
 
 // Example of Object Literals is as follows:
 
-// property ka use ye h k meny const ka use kea hai and method ks
-// mtlb ye h k meny function ka use kea hai...
+// property ka use ye h k meny const ka use kea hai and method ka use ye h k meny function ka use kea hai...
 
 const user = {
     username: "noor",
@@ -37,15 +36,17 @@ const user = {
 console.log(user.username);
 console.log(user.getUserDetails());
 
-----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
 - i-Constructor function
 - ii-Prototypes(Proto, Prototypes)
 - iii-Classes
 - iv-Instances (new, this)
 
+
 ## - i-Constructor function Example
 
-## (Important batain constructor function ki ye hain k jesy e hum new keyword likhty hain tu hmry ps 1 new object create hota hai, jisko instance bola jta hai, so it means in step 01-- object create hota hai when we write a "new keyword" , in step 01-- new keyword ki wjaa sy "constructor function" call hota hai(ab ye kea krta h hmry ps jitny b arguments wagaira hoty hain onko 1 new keyword m pack krta hai or hmy dedeta hai), in step 03- jitny b  this keywords wagiara h na wo osmai inject hojty hain and in step 04, hmy function k andr mil jty hain...)
+## (Important batain constructor function ki ye hain k jesy e hum new keyword likhty hain tu hmry ps 1 new object create hota hai, jisko instance bola jta hai, so it means in step 01-- object create hota hai when we write a "new keyword" , in step 02-- new keyword ki wjaa sy "constructor function" call hota hai(ab ye kea krta h hmry ps jitny b arguments wagaira hoty hain onko 1 new keyword m pack krta hai or hmy dedeta hai), in step 03- ab jo new keyword hmry ps aya h na ab hum osko "this" keyword m inject krdety hain and in step 04, hmy function k andr mil jty hain...)
 
 function userone(username, loginCount, isLoggedIn){
 

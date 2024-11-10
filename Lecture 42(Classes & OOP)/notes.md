@@ -14,7 +14,7 @@ Basically hmara code buht e zda mess-up horha tha k koi b chunk si sy use nahi h
 <!-- Javascrip ka 1 bht acha feature hai Services krk osmai hum log ye use krskty hain but in projects we will discuss further details of it... -->
 
 ## Parts/Components of OOP
-Object literals => {}..mnz two
+Object literals => {isk andr hmry ps properties and methods hoty hain...}..mnz two
 
 - Constructor function
 - Prototypes(Proto, Prototypes)

@@ -14,7 +14,8 @@ Basically hmara code buht e zda mess-up horha tha k koi b chunk si sy use nahi h
 <!-- Javascrip ka 1 bht acha feature hai Services krk osmai hum log ye use krskty hain but in projects we will discuss further details of it... -->
 
 ## Parts/Components of OOP
-Object literals => {isk andr hmry ps properties and methods hoty hain...}..mnz two.
+
+1--Object literals => {isk andr hmry ps properties and methods hoty hain...}..mnz two.
 
 Example of Object Literals is:
 
@@ -37,10 +38,10 @@ console.log(user.username);
 console.log(user.getUserDetails());
 
 ----------------------------------------------------------
-- Constructor function
-- Prototypes(Proto, Prototypes)
-- Classes
-- Instances (new, this)
+- i-Constructor function
+- ii-Prototypes(Proto, Prototypes)
+- iii-Classes
+- iv-Instances (new, this)
 
 ## 4 Pillars of OOP:
 
@@ -51,3 +52,14 @@ console.log(user.getUserDetails());
 - Polymorphism(Poly means bht sary, morphism means Methods. (simply say bht sary roop.))
   Example: console.log wagaira essy bht sary kam krdeta hai...
 
+
+## This Keyword Game;
+
+// This keyword simply ye hota hai k hmy current context ko specify krna prta hai
+// Simple c example ye h k jesy kal monday h mext week mond h ab m kis mon ki bt kr ri o tu mjhy specify krna pryega k m kiski bt kr ri o
+// tu basicalyy this keyword specify e krta h or osklye e use hota hai....
+// Example:
+// let arr = [1, 2, 3]
+// console.log(arr)   
+// ab m array m jo b loop lagaogi m osko specfic krny klye btana pryga k m kis index ko access krna chah ri o...  
+// NOTE:(this keyword specify current context...)

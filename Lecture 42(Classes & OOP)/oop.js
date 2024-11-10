@@ -1,4 +1,4 @@
-// Example of Object Literals is as follows:
+//====1---------- Example of Object Literals is as follows:
 
 
 // property ka use ye h k meny const ka use kea hai and method ks
@@ -25,14 +25,10 @@ console.log(user.getUserDetails());
 console.log(this);  //output = {} (iska mtlb ye h k abhi global context mai kuch b nahi hai.)
 
 
+//====i---------- Example of  Construtor Functions is as follows:
 
-// =====================This keyword Game:============================
 
-// This keyword simply ye hota hai k hmy current context ko specify krna prta hai
-// Simple c example ye h k jesy kal monday h mext week mond h ab m kis mon ki bt kr ri o tu mjhy specify krna pryega k m kiski bt kr ri o
-// tu basicalyy this keyword specify e krta h or osklye e use hota hai....
-// Example:
-// let arr = [1, 2, 3]
-// console.log(arr)   
-// ab m array m jo b loop lagaogi m osko specfic krny klye btana pryga k m kis index ko access krna chah ri o...  
-// NOTE:(this keyword specify current context...)
+const promiseOne = new Promise()        //yahan pr jo new keyword h na ye basically construtor function hai..
+const date = new Date();                //yahan pr jo new keyword h na ye basically construtor function hai..
+                
+

@@ -42,11 +42,16 @@ function userone(username, loginCount, isLoggedIn){
     this.loginCount = loginCount;
     this.isLoggedIn = isLoggedIn;
 
+    // ab is "this keyword" k andr hum 1 or function b load krskty hain like this:
+    // greeting is a variable in which i am passging function...
+    this.greeting = function(){
+        console.log(`Welcome ${this.username}`);
+    } //ab jb hum ikso run krygy tu result m osk ps ye method b availabale hoga...
     // return basically implicitly define hota e h islye likhy ya na koi b frq ni prta hai...
     return this;
 }
 
-console.log(userone);
+// console.log(userone);
 
 // Ab aghr m yahan pr new keyword use ni krti na tu userthree jo k updated h whi bs console pr print hoga lkin usertwo o ga e ni
 // islye tu this keyword bht e important hai...
@@ -60,6 +65,9 @@ const userTwo = new userone("noor", 1, true);
 const userthree = new userone("fatima", 2, false);
 
 console.log(userTwo);
+// ab yahan pr abstraction b horha hai , encapsulation b horha hai ..mtlb user ko ni mtlb greetings m kea hora h etc.and username kahan pr ja k store horha hai tu encapsulation b horhi hai...
+console.log(userTwo.constructor);       // output = [Function: userone]
+
 console.log(userthree);
 
 // Example 02-----:

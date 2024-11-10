@@ -165,6 +165,7 @@ consumepromisefile();
 //     // convert this above string into json format.
 //     const data = await response.json();
 //     console.log(data);
+
 //  } catch (error) {
 //     console.log("E: ",error);  
 //  }

@@ -51,7 +51,7 @@ function userone(username, loginCount, isLoggedIn){
     return this;
 }
 
-// console.log(userone);
+console.log(userone);           // output = [Function: userone]
 
 // Ab aghr m yahan pr new keyword use ni krti na tu userthree jo k updated h whi bs console pr print hoga lkin usertwo o ga e ni
 // islye tu this keyword bht e important hai...
@@ -65,7 +65,7 @@ const userTwo = new userone("noor", 1, true);
 const userthree = new userone("fatima", 2, false);
 
 console.log(userTwo);
-// ab yahan pr abstraction b horha hai , encapsulation b horha hai ..mtlb user ko ni mtlb greetings m kea hora h etc.and username kahan pr ja k store horha hai tu encapsulation b horhi hai...
+// ab yahan pr abstraction b horha hai mtlb user ko ni mtlb greetings m kea hora h etc, encapsulation b horha hai ...jesy username kahan pr ja k store horha hai tu encapsulation hi hai...
 console.log(userTwo.constructor);       // output = [Function: userone]
 
 console.log(userthree)

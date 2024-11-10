@@ -38,7 +38,7 @@ console.log(user.getUserDetails());
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-- i-Constructor function
+- i-Constructor function(this keyword)
 - ii-Prototypes(Proto, Prototypes)
 - iii-Classes
 - iv-Instances (new, this)

@@ -14,4 +14,5 @@ essy hi smjo "String" hai and string k andr b "object" hi hai..and same "object"
 
 <!-- "Array" k andr =====> "Object" hai ===> and object k andr h "null" -->
 <!-- "String" k andr =====> "Object" hai ===> and object k andr h "null "-->
-<!-- "Function" k andr ====>??? -->
+<!-- "Function" k andr ====> "Object" hai ===> and object 
+andr h "null"-->

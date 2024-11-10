@@ -68,7 +68,4 @@ console.log(userTwo);
 // ab yahan pr abstraction b horha hai , encapsulation b horha hai ..mtlb user ko ni mtlb greetings m kea hora h etc.and username kahan pr ja k store horha hai tu encapsulation b horhi hai...
 console.log(userTwo.constructor);       // output = [Function: userone]
 
-console.log(userthree);
-
-
-
+console.log(userthree)

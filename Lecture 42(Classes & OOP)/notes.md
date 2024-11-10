@@ -14,8 +14,29 @@ Basically hmara code buht e zda mess-up horha tha k koi b chunk si sy use nahi h
 <!-- Javascrip ka 1 bht acha feature hai Services krk osmai hum log ye use krskty hain but in projects we will discuss further details of it... -->
 
 ## Parts/Components of OOP
-Object literals => {isk andr hmry ps properties and methods hoty hain...}..mnz two
+Object literals => {isk andr hmry ps properties and methods hoty hain...}..mnz two.
 
+Example of Object Literals is:
+
+// Example of Object Literals is as follows:
+
+// property ka use ye h k meny const ka use kea hai and method ks
+// mtlb ye h k meny function ka use kea hai...
+
+const user = {
+    username: "noor",
+    loginCount: 0,
+    signedIn: true,
+
+    getUserDetails: function(){
+        console.log("Got user details from database..."); 
+    }
+}
+
+console.log(user.username);
+console.log(user.getUserDetails());
+
+----------------------------------------------------------
 - Constructor function
 - Prototypes(Proto, Prototypes)
 - Classes

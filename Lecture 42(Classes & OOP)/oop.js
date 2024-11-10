@@ -70,5 +70,5 @@ console.log(userTwo.constructor);       // output = [Function: userone]
 
 console.log(userthree);
 
-// Example 02-----:
+
 

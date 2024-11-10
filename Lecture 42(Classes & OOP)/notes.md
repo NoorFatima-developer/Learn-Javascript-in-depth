@@ -17,14 +17,16 @@ Basically hmara code buht e zda mess-up horha tha k koi b chunk si sy use nahi h
 Object literals => {}..mnz two
 
 - Constructor function
-- Prototypes
+- Prototypes(Proto, Prototypes)
 - Classes
 - Instances (new, this)
 
 ## 4 Pillars of OOP:
 
-- Abstraction
-- Encapsulation
+- Abstraction(Hide details klye use krt hain.. Example fetch())
+- Encapsulation(Wrap-up the data(mnz jo hum data visible krwana chah rye hain osko hum visible krwa
+  skty hain and jo hum hatana chah rye hain osko hum hata skty hain by using Encapsulation))
 - Inheritance
-- Polymorphism
+- Polymorphism(Poly means bht sary, morphism means Methods. (simply say bht sary roop.))
+  Example: console.log wagaira essy bht sary kam krdeta hai...
 

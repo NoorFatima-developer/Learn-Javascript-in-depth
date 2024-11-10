@@ -2,7 +2,7 @@
 // <!-- "Function" k andr ====> Object???(kea function b 1 object hai???) -->
 
 
-// Clear with example:
+// Clear with example:(Is function also an object?)
 
 function multiplyBy5(num){
     return num*5;
@@ -17,3 +17,10 @@ console.log(multiplyBy5.prototype); ////output = {} (empty object e aya hai outp
 
 // So 1 bt tu clear hogi h at the end of the day everything is object in javascript...
 // mtlb function jo h function tu h  apny andr lkin zrort prny pr wo 1 object ki trhan b behave krta hai...
+
+// ====Now Again dicuss "this" keywrord in function====...
+
+function createuser(username, score){
+    this.username = username;
+    this.score = score;
+}

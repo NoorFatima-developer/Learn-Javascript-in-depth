@@ -27,8 +27,40 @@ console.log(this);  //output = {} (iska mtlb ye h k abhi global context mai kuch
 
 //====i---------- Example of  Construtor Functions is as follows:
 
-
-const promiseOne = new Promise()        //yahan pr jo new keyword h na ye basically construtor function hai..
-const date = new Date();                //yahan pr jo new keyword h na ye basically construtor function hai..
+// const promiseOne = new Promise()         //yahan pr jo new keyword h na ye basically construtor function hai....
+// const date = new Date();                 //yahan pr jo new keyword h na ye basically construtor function hai..
                 
+// Example 01-----:
+
+function userone(username, loginCount, isLoggedIn){
+    // aghr m below statement this k bagair likhogi tu kesy pata chlyga k konsa username variable h or konsa username value h
+    // wesy no doubt hmy pta hota hai lkin fer b specify krna is a good practice.
+    // username = username
+    // so i will use this...like this:
+
+    this.username = username;
+    this.loginCount = loginCount;
+    this.isLoggedIn = isLoggedIn;
+
+    // return basically implicitly define hota e h islye likhy ya na koi b frq ni prta hai...
+    return this;
+}
+
+console.log(userone);
+
+// Ab aghr m yahan pr new keyword use ni krti na tu userthree jo k updated h whi bs console pr print hoga lkin usertwo o ga e ni
+// islye tu this keyword bht e important hai...
+
+// without new keyword it will not work...
+// const userTwo = userone("noor", 1, true);
+// const userthree = userone("fatima", 2, false);
+
+// Tu yehi tu bt hai constructor function ki jo k hmy new instance deta hai hr dfa new copy deta hai..ab oss copy k sath jo b play krygy wo hmry hawaly hai 
+const userTwo = new userone("noor", 1, true);
+const userthree = new userone("fatima", 2, false);
+
+console.log(userTwo);
+console.log(userthree);
+
+// Example 02-----:
 

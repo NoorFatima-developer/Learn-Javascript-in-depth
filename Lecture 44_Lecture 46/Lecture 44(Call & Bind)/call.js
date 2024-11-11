@@ -11,7 +11,7 @@ function SetUsername(username) {
 // ab m US waly ko pakistan m define krna chahti hon..
 function createUser(username, email, password) {
 
-    // ====Call ki kahani?===(In simple words, current execution context kisi aur function ko pass krdeta hai...)
+    // ====Call ki kahani?===(In simple words, this apna current execution context kisi aur function ko pass krdeta hai...)
     // US ka this basically apna current execution context Pakistan k function ko pass kerrha hai..ye hai call
     // jismai 1 func apna this dosry function ko dedey k me iss chor rha ho ab tm snbalo...
 

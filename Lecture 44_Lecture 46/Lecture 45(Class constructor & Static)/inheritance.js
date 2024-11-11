@@ -42,4 +42,11 @@ masalachai.logMe()
 // Teacher store j chai m tu meny teacher ko user sy extends kea h tu logMe ka access teacher yani chai k ps b o ga..
 chai.logMe();
 
+// teacher chai k andr store h tu is chai === teacher?
+console.log(chai === Teacher);  //false
+console.log(chai === User);     //false
 
+// Hmny oska instance rkha hai na dosri class m na k pura utha k that's why we will use instanceof keyword here...
+
+console.log(chai instanceof Teacher); // true
+console.log(chai instanceof User); // true

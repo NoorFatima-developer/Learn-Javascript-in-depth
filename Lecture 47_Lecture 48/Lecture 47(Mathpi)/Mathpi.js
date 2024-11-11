@@ -15,9 +15,13 @@ console.log(descriptor);
 // 03-- And yahan meny try krlea...(k kesa m khudsy object create kek pie ki value ko change krskti o...)
 
 const chai = {
-    name: "Chai",
+    name: "Chaid",
     price: 10,
-    isAvailable: true
+    isAvailable: true,
+
+    orderChai: function(){
+        console.log("chai nahi bani");    
+    }
 }
 
 console.log(chai);
@@ -28,7 +32,21 @@ console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 
 Object.defineProperty(chai, 'name', {
     writable: false,
-    enumerable: false
+    enumerable: true
 })
 
 console.log(Object.getOwnPropertyDescriptor(chai, "name"));
+
+// Ab mai loop laga k dekho bala?
+// for loop b laga skti thie lkin object klye for-of loop easy rehta hai ku k osmai direct key: value pair ajti like this:
+
+for (let [key, value] of Object.entries(chai)) {
+
+    if (typeof value !== 'function') {
+        console.log(`${key}: ${value} `); 
+    }
+}
+
+// ab yehi kam m 3 dfa krti islye m oper loop laga lea ta k ye kam 3 dfa na krna pry...
+console.log(`name: ${chai.name}`);
+    

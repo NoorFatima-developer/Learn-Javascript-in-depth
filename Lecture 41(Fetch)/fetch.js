@@ -32,3 +32,4 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 // NOTE:
 // Ab important bt ye h k try, catch jo h wo hmesha async func k andr e run o ga and .then, catch without async func hi run hoga...
+

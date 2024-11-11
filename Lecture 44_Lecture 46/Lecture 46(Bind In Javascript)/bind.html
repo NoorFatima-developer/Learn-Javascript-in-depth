@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind</title>
+</head>
+<body>
+    
+    <button>Click Me</button>
+
+ <!-- Motive: ye h k jesy e page load o tu apka react ka 1 object create o jyega...(meny ye nichy 1 object create krdea hai...)
+ 2 requirement: 1 button ka refrence mil jyega or 2nd 1 method o jo kahy k form submit o gya hai ya button pr click o gya hai... -->
+
+    <script>
+        class React {
+
+            constructor(){
+                this.library = "React";     //hardcode
+                this.server = "http://localhost:3000"
+
+                // Button ka refrence mil jye jb m click kro tu i will attach eventlistener to this method obviously...
+
+                document
+                        .querySelector('button')
+                        // ab button waly k sath this likhdea tu wo button ka refrence tu degyga lkin wo this.server ko ni dega islye mjy osko bind krna pryga like below:
+                        .addEventListener('click', this.handleClick.bind(this)); // bind method use kro tu this keyword bhi use krogi ku k oska e tu current context chye mjhy......
+                }
+
+            // Meny ye method use kea hai...
+            handleClick(){
+                console.log("button clicked");
+                console.log(this);
+                
+                console.log(this.server);
+                console.log(this.library);
+            }
+        }
+
+        // Object has been created:(clas k bhr e o ga obviuously...)
+        const app = new React()
+
+    </script>
+</body>
+</html>

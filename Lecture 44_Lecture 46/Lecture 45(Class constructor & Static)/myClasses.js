@@ -5,7 +5,7 @@
 
 // ==========Create Classes in Jvascript Example:===========
 
-
+// Modern use classes as well...
 // Do this work by class..
 class User {
     constructor(username, email, password) {

@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Closures</title>
 </head>
-<body>
-    
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+
     <script>
 
         // Lexical Scoping Example 01:
@@ -59,10 +61,43 @@
     }
 
     // Ab jb ye call o ga tu isk andr sirf makeFunc ka inner wala execution context nahi jyega balky pura lexical scope jyega ismai...
+    // Iss sy ye hoga k displayName k andr jo name print horha hai na wo successfully print o ga.ku k isk andr pura lexical scope ara hai
+    // aghr lexical scope na arahaa hota tu kbi b printna hota ku k ye "name" displayName k andr hai na k osk bhr...
     const myFunc = makeFunc();
     myFunc();
 
     </script>
 
+    <script>
+        document.getElementById("orange").onclick = function(){
+            document.body.style.backgroundColor = "orange";
+        }
+        document.getElementById("green").onclick = function(){
+            document.body.style.backgroundColor = "green";
+        }
+
+        // Ab aghr mjhy 5- buttons banany hain or onpr click event lagana h tu kea m above walam kam krogi tb b?
+        // krskty hain but itna time kon lagye islye i will do by this new approach..
+
+        // islye m 1 separate function l andr color wala kam krdeti o or click jo event h osko m oska reference pass krdogi...
+
+        // yhi pr hi tu closures hai ku k color meny outer func clickHandle m pass kea h lkin oska access
+        // inner function jo return hora osko islye milra hai ku k lexical scope hai..jesy e 
+        // clickHandle call o ga osk andr sirf 1 chez ni ayehi balky pura lexical scope ayega..
+        function clickHandle(color){
+
+            // ye line work ni krygi ku k jb m event ko iss func ka refrence dogi tu without my click e func ko exeute krdyga..
+            // document.body.style.backgroundColor = color;
+            // I will return this
+            return function(){
+                // ye color ko inject krny k 2no e style thk hain koi b follow krskti o mai...
+                // document.body.style.backgroundColor = `${color}`;
+                document.body.style.backgroundColor = color;
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandle("orange")
+        document.getElementById('green').onclick = clickHandle("green")
+    </script>
 </body>
 </html>

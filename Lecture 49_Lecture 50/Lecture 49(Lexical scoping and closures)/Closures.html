@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    
+    <script>
+        // function init() {
+        //     let name = "Mozilla";
+        //     function displayName() {
+        //         console.log(name);
+        //     }
+        //     displayName();
+        // }
+        // init();
+
+        // Jo variables hum fnc k andr define krty hain wo oss function k bhr accessible nahi hoty like this:
+
+        function outer(){
+            // wesy normally jb hum func banaty hain tu hum variable ko outside discuss krty hain islye wo outside accesible b hoty
+            // hain after function ,,lkin yahan hum func k andr define kr rhy hain islye wo outside accesible nahi hongy...
+            let username = "hitesh"
+
+            // Another func is:
+            function inner(){
+                let secret = "secret"
+                console.log("Inner function", username);    //output = hitesh(Accessible)
+            }
+            inner();
+
+            function innertwo(){
+                console.log("Innertwo function", username);    //output = hitesh(Accessible)
+                console.log(secret);                           //output = Not Accessible
+
+            }
+            innertwo();
+        }
+
+        outer();
+        console.log("Outer function", username);      //output = username is not defined(error)
+        
+    </script>
+
+</body>
+</html>

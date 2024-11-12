@@ -8,3 +8,8 @@ Iska ans hai g nahi..
 
 Tu iska mtlb parent ka variable andr waly dono childs ko hoga lkin 1 child ka variable dosry child ko accessible nahi hoga...
 
+
+## Javascript Roles:
+Javascript k 2 roles hain..
+-1 memory ko store krna..
+2- single thread ko code ko execute krna...

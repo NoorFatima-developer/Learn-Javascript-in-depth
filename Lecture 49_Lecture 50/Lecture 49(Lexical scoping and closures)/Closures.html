@@ -50,7 +50,18 @@
         
         // Closures Example 01:
 
-        
+        function makeFunc(){
+            const name = "Mozilla";
+            function displayName(){
+                console.log(name);
+        }
+        return displayName;
+    }
+
+    // Ab jb ye call o ga tu isk andr sirf makeFunc ka inner wala execution context nahi jyega balky pura lexical scope jyega ismai...
+    const myFunc = makeFunc();
+    myFunc();
+
     </script>
 
 </body>

@@ -8,16 +8,22 @@
 <body>
     
     <script>
-        // function init() {
-        //     let name = "Mozilla";
-        //     function displayName() {
-        //         console.log(name);
-        //     }
-        //     displayName();
-        // }
-        // init();
 
+        // Lexical Scoping Example 01:
+
+        function init() {
+            let name = "Mozilla";
+            function displayName() {
+                console.log(name);
+            }
+            displayName();
+        }
+        init();
+
+        // What is Lexical Scoping?
         // Jo variables hum fnc k andr define krty hain wo oss function k bhr accessible nahi hoty like this:
+
+        // Lexical Scoping Example 02:
 
         function outer(){
             // wesy normally jb hum func banaty hain tu hum variable ko outside discuss krty hain islye wo outside accesible b hoty
@@ -41,6 +47,9 @@
 
         outer();
         console.log("Outer function", username);      //output = username is not defined(error)
+        
+        // Closures Example 01:
+
         
     </script>
 

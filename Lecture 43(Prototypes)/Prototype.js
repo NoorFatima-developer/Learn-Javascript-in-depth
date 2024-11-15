@@ -97,9 +97,9 @@ Object.setPrototypeOf(TeachingSupport, Teacher)
 // Example 01(Example how remove whitespaces with just one property):
 
 let anotherusername = "noorfatima      ";
-let anotherusername1 = "noorfatima      ";
 
 String.prototype.trueLength1 = function () {
+
     console.log(`${this}`);
     // console.log(`${this.anotherusername}`);
     console.log(`True length is: ${this.trim().length}`);
